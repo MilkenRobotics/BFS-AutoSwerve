@@ -64,15 +64,15 @@ public class SwerveModule {
                 moduleName + "/CancoderIntegratedAngle", 0);
 
         /* Angle Encoder Config */
-        m_angleEncoder = new CANCoder(moduleConstants.cancoderID, "Canivore");
+        m_angleEncoder = new CANCoder(moduleConstants.cancoderID, "rio");
         configAngleEncoder();
 
         /* Angle Motor Config */
-        m_steerMotor = new WPI_TalonFX(moduleConstants.angleMotorID, "Canivore");
+        m_steerMotor = new WPI_TalonFX(moduleConstants.angleMotorID, "rio");
         configAngleMotor();
 
         /* Drive Motor Config */
-        m_driveMotor = new WPI_TalonFX(moduleConstants.driveMotorID, "Canivore");
+        m_driveMotor = new WPI_TalonFX(moduleConstants.driveMotorID, "rio");
         configDriveMotor();
 
         m_lastAngle = getState().angle;

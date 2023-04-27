@@ -50,7 +50,7 @@ public class SwerveSubsystem extends SubsystemBase {
 			new SwerveModule("Rear Left", 2, Mod2.constants),
 			new SwerveModule("Rear Right", 3, Mod3.constants)
 	};
-	private final Pigeon2 m_pigeon = new Pigeon2(Constants.SwerveK.kPigeonCANID, "Canivore");
+	private final Pigeon2 m_pigeon = new Pigeon2(Constants.SwerveK.kPigeonCANID, "rio");
 
 	private final ProfiledPIDController thetaController = new ProfiledPIDController(
 			kPThetaController, 0, 0,
@@ -84,7 +84,7 @@ public class SwerveSubsystem extends SubsystemBase {
 		m_pigeon.configFactoryDefault();
 		zeroGyro();
 
-		Timer.delay(.5);
+		Timer.delay(1);
 		for (var mod : m_modules) {
 			mod.resetToAbsolute();
 		}
